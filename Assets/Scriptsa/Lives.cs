@@ -23,5 +23,9 @@ public class Lives : Monobehaviour {
    {
      lives -= damage;
      UpdateDisplay();
+     
+     if (lives <= 0)
+     {
+       FindObjectOfType<LevelLoader>().LoadYouLose();
    }
 }
