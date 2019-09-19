@@ -26,4 +26,8 @@ public class LevelLoader : MonoBehaviour {
     {
       SceneManager.LoadScene(currentSceneIndex + 1);
     }
+  
+    public void LoadYouLose()
+    {
+      SceneManager.LoadScene("YouLose");
 }
