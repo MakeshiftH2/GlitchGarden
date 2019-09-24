@@ -16,6 +16,10 @@ public class AttackerSpawner : MonoBehaviour {
         SpawnAttacker();
       }
     }
+  
+  pubic void StopSpawning() {
+    spawn = false;
+  }
     
     private void SpawnAttacker()
     {
