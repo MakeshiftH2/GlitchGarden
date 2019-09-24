@@ -8,9 +8,8 @@ public class Lizard : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
         GameObject otherObject = otherCollider.gameObject;
-        if (otherObject.GetComponent<Defender>()
-        {
-          GetComponent<Attack>().Attacked(otherObject);
+        if (otherObject.GetComponent<Defender>()){
+            GetComponent<Attack>().Attacked(otherObject);
         }
     }
 
