@@ -13,7 +13,11 @@ public class Attack : MonoBehaviour {
     }
     
     private void OnDestroy() {
-        FindObjectOfType<LevelController>().AttackerKilled();
+        LevelController levelController = FindObjectOfType<LevelController>();
+        if(levelController != null)
+        {
+            levelController.AttackerKilled();
+        }
     }
 
     void Update()
