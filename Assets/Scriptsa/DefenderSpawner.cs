@@ -18,8 +18,9 @@ public class DefenderSpawner : MonoBehaviour {
         defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
         if(!defenderParent)
         {
-            defenderParent = new GameObject(Defender_PARENT_NAME);
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
         }
+    }
 
     private void OnMouseDown()
     {
