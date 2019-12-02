@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour {
+public class Attack : MonoBehaviour
+{
 
     [Range(0f, 5f)]
     float currentSpeed = 1f;
     GameObject currentTarget;
-    
-    private void Awake() {
+
+    private void Awake()
+    {
         FindObjectOfType<LevelController>().AttackerSpawned();
     }
-    
-    private void OnDestroy() {
-        LevelController levelController = FindObjectOfType<LevelController>();
-        if(levelController != null)
-        {
-            levelController.AttackerKilled();
-        }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerKilled();
     }
 
     void Update()

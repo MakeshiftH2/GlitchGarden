@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsController : MonoBehaviour {
   
@@ -17,7 +18,7 @@ public class OptionsController : MonoBehaviour {
   
   void Update () {
     var musicPlayer = FindObjectOfType<MusicPlayer>();
-    if (musicPLayer)
+    if (musicPlayer)
     {
       musicPlayer.SetVolume(volumeSlider.value);
     }
@@ -30,14 +31,14 @@ public class OptionsController : MonoBehaviour {
   
   public void SaveAndExit()
   {
-    PlayerPrefsController.SetMasterVOlume(volumeSlider.value);
-    PlayerPrefsController.SetDIfficulty(DifficultySlider.value);
+    PlayerPrefsController.SetMasterVolume(volumeSlider.value);
+    PlayerPrefsController.SetDifficulty(difficultySlider.value);
     FindObjectOfType<LevelLoader>().LoadMainMenu();
   }
   
   public void SetDefaults()
   {
-    volumeSlider.value = defaultVOlume;
+    volumeSlider.value = defaultVolume;
     difficultySlider.value = defaultDifficulty;
   }
   

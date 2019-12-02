@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Engine;
+using UnityEngine;
 
-public class MusicPlayer : MonoBehaviour {
-  
-  AudioSource audioSource;
-  
-  void Start()
-  {
-    DontDestroyOnLoad(this);
-    audioSource = GetComponent<AudioSource>();
-    audioSource.volume = PlayerPrefsController.GetMasterVolume();
-  }
-  
-  public void SetVolume(float volume)
-  {
-    audioSource.volume = volume;
-  
+public class MusicPlayer : MonoBehaviour
+{
+
+    AudioSource audioSource;
+
+    void Start()
+    {
+        DontDestroyOnLoad(this);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefsController.GetMasterVolume();
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioSource.volume = volume;
+
+    }
 }
